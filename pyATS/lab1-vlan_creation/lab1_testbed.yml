@@ -1,0 +1,19 @@
+testbed:      #optional
+  name: vlan creation
+  credentials:
+    default:
+      username: cisco
+      password: cisco
+    enable:
+      password: cisco
+
+devices:    #mandatory
+  switches:
+    type: switch           #mandatory
+    connections:                    #mandatory
+      cli:
+        protocol: ssh
+        ip:
+          - "192.168.1.11"
+          - "192.168.1.12"
+          - "192.168.1.13"
