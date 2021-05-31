@@ -1,6 +1,6 @@
 from pyats.topology import loader
 
-testbed = loader.load('/mobizinc/pyATS/lab1-vlan_creation/lab1-testbed.yml')
+testbed = loader.load('lab1-testbed.yml')
 
 testbed.devices
 cisco_switches = testbed.devices['swithces']
