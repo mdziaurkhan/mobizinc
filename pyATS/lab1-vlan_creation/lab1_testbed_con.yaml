@@ -1,0 +1,43 @@
+devices:
+  NexSW-192.168.1.12:
+    connections:
+      cli:
+        ip: 192.168.1.12
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: NX-Osv
+    platform: NX-OS
+    type: NX-Osv
+  NexSW-192.168.1.13:
+    connections:
+      cli:
+        ip: 192.168.1.13
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: NX-Osv
+    platform: NX-OS
+    type: NX-Osv
+  SW-192.168.1.11:
+    connections:
+      cli:
+        ip: 192.168.1.11
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: cisco
+      enable:
+        password: cisco
+    os: vios
+    platform: IOSvL2
+    type: vios
