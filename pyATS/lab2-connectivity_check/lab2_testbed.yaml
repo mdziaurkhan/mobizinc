@@ -1,43 +1,37 @@
+testbed:
+  name: Connectivity_check
+  credentials:
+    default:
+      password: cisco
+      username: cisco
+    enable:
+      password: cisco
+
 devices:
   NexSW-192.168.1.12:
     connections:
       cli:
         ip: 192.168.1.12
         protocol: ssh
-    credentials:
-      default:
-        password: cisco
-        username: cisco
-      enable:
-        password: cisco
     os: NX-OS
     platform: NX-OS
     type: NX-OSv
+    alias: switch
   NexSW-192.168.1.13:
     connections:
       cli:
         ip: 192.168.1.13
         protocol: ssh
-    credentials:
-      default:
-        password: cisco
-        username: cisco
-      enable:
-        password: cisco
     os: NX-OS
     platform: NX-OS
     type: NX-OSv
+    alias: switch
   SW-192.168.1.11:
     connections:
       cli:
         ip: 192.168.1.11
         protocol: ssh
-    credentials:
-      default:
-        password: cisco
-        username: cisco
-      enable:
-        password: cisco
     os: ios
     platform: IOSvL2
     type: vios
+    alias: switch
