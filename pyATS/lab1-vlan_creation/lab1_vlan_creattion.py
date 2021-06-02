@@ -3,9 +3,14 @@ from pyats.topology import loader
 testbed = loader.load('lab1_testbed_con.yaml')
 
 testbed.devices
-cisco_switches = testbed.devices['NexSW-192.168.1.12']
+#cisco_switches = testbed.devices['NexSW-192.168.1.12']
+for i in testbed.devices:
+    cisco_switches=testbed.devices[i]
+    cisco_switches.connect ()
+    print (cisco_switches.execute('show version'))
+    cisco_switches.disconnect ()
 
-cisco_switches.connect ()
+#cisco_switches.connect ()
 
-print (cisco_switches.execute('show version'))
-cisco_switches.disconnect ()
+#print (cisco_switches.execute('show version'))
+#cisco_switches.disconnect ()
