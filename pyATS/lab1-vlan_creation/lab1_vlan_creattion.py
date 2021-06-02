@@ -7,7 +7,7 @@ testbed.devices
 for i in testbed.devices:         # i is a variable.
     cisco_switches=testbed.devices[i]
     cisco_switches.connect ()
-    print (cisco_switches.execute('show version'))
+    print (cisco_switches.execute('show version | in uptime'))
     cisco_switches.disconnect ()
 
 #cisco_switches.connect ()
