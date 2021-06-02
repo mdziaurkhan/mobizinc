@@ -10,9 +10,9 @@ devices:
         username: cisco
       enable:
         password: cisco
-    os: NX-Osv
+    os: NX
     platform: NX-OS
-    type: NX
+    type: NX-OSv
   NexSW-192.168.1.13:
     connections:
       cli:
@@ -24,9 +24,9 @@ devices:
         username: cisco
       enable:
         password: cisco
-    os: NX-Osv
+    os: NX
     platform: NX-OS
-    type: NX
+    type: NX-OSv
   SW-192.168.1.11:
     connections:
       cli:
