@@ -12,7 +12,7 @@ devices:
         password: cisco
     os: nx
     platform: NX-OS
-    type: NX-OSv
+    type: NX-OS
   NexSW-192.168.1.13:
     connections:
       cli:
@@ -26,7 +26,7 @@ devices:
         password: cisco
     os: nx
     platform: NX-OS
-    type: NX-OSv
+    type: NX-OS
   SW-192.168.1.11:
     connections:
       cli:
