@@ -16,7 +16,7 @@ devices:
     os: NX-OS
     platform: NX-OS
     type: NX-OSv
-    alias: switch
+    alias: switch2
   NexSW-192.168.1.13:
     connections:
       cli:
@@ -25,7 +25,7 @@ devices:
     os: NX-OS
     platform: NX-OS
     type: NX-OSv
-    alias: switch
+    alias: switch3
   SW-192.168.1.11:
     connections:
       cli:
@@ -34,4 +34,4 @@ devices:
     os: ios
     platform: IOSvL2
     type: vios
-    alias: switch
+    alias: switch1
