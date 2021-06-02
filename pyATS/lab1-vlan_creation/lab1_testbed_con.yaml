@@ -10,7 +10,7 @@ devices:
         username: cisco
       enable:
         password: cisco
-    os: NX-OS
+    os: NXOS
     platform: NX-OSv
     type: NX-OS
   NexSW-192.168.1.13:
@@ -24,7 +24,7 @@ devices:
         username: cisco
       enable:
         password: cisco
-    os: NX-OS
+    os: NXOS
     platform: NX-OSv
     type: NX-OS
   SW-192.168.1.11:
