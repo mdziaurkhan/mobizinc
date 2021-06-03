@@ -14,7 +14,7 @@ class CommonSetup(aetest.CommonSetup):
                 testbed.devices[i].connect()
 
 class VlanCreation(aetest.Testcase):
-    @aetest.test
+    @aetest.setup
     def Create_Vlan(self, steps):
         testbed = loader.load('lab3_testbed.yaml')
         testbed.devices
