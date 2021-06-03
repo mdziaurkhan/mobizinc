@@ -6,8 +6,9 @@ class CommonSetup(aetest.CommonSetup):
 
     @aetest.subsection
     def establish_connections(self, steps, i):
-        with steps.start('Connecting to %s' % i):
-            i.connect()
+        for i in testbed.devices:
+            with steps.start('Connecting to %s' % i):
+                i.connect()
 
 
 class CommonCleanup(aetest.CommonCleanup):
@@ -15,7 +16,7 @@ class CommonCleanup(aetest.CommonCleanup):
     @aetest.subsection
     def disconnect(self, steps, i):
         with steps.start('Disconnecting from %s' % i):
-            ios1.disconnect()
+            i.disconnect()
 
 
 if __name__ == '__main__':
@@ -26,10 +27,9 @@ if __name__ == '__main__':
 
     testbed.devices
 
-    for i in testbed.devices:
-        parser = argparse.ArgumentParser()
-        parser.add_argument('--testbed', dest = 'testbed',
-                        type = loader.load)
-        args, unknown = parser.parse_known_args()
+    #for i in testbed.devices:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--testbed', dest = 'testbed',type = loader.load)
+    args, unknown = parser.parse_known_args()
 
     aetest.main(**vars(args))
