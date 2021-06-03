@@ -11,7 +11,7 @@ class CommonSetup(aetest.CommonSetup):
 
 class VlanCreation(aetest.Testcase):
     @aetest.setup
-    def Create_Vlan(self, steps, new_vlan):
+    def Create_Vlan(self, steps):
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
                 testbed.devices[i].add_feature(new_vlan)
