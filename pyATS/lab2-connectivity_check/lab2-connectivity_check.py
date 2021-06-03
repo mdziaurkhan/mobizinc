@@ -1,6 +1,8 @@
 #   connectivity_check.py
 
 from pyats import aetest
+testbed = loader.load('lab2_testbed.yaml')
+testbed.devices
 
 class CommonSetup(aetest.CommonSetup):
     for i in testbed.devices:
