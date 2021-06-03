@@ -39,4 +39,4 @@ if __name__ == '__main__':
     #parser.add_argument('--testbed', dest = 'testbed',type = loader.load)
     #args, unknown = parser.parse_known_args()
 
-    aetest.main(**vars(args))
+    aetest.main()
