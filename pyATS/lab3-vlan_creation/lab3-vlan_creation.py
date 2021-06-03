@@ -3,7 +3,7 @@
 from pyats import aetest
 from pyats.topology import loader
 from genie.libs.conf.vlan import vlan
-
+logger = logging.getLogger(__name__)
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def establish_connections(self, steps):
@@ -52,5 +52,5 @@ if __name__ == '__main__':
     args, unknown = parser.parse_known_args()
 
     vlan = int(args.vlan)
-    
+
     aetest.main(**vars(args))
