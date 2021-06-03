@@ -1,6 +1,7 @@
 #   connectivity_check.py
 
 from pyats import aetest
+from pyats.topology import loader
 testbed = loader.load('lab2_testbed.yaml')
 testbed.devices
 
