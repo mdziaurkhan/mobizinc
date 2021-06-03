@@ -17,7 +17,7 @@ class CommonSetup(aetest.CommonSetup):
 class CommonCleanup(aetest.CommonCleanup):
 
     @aetest.subsection
-    def disconnect(self, steps, i):
+    def disconnect(self, steps):
         testbed = loader.load('lab2_testbed.yaml')
         testbed.devices
         for i in testbed.devices:
