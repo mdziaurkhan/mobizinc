@@ -21,7 +21,7 @@ class CommonCleanup(aetest.CommonCleanup):
         testbed = loader.load('lab2_testbed.yaml')
         testbed.devices
         for i in testbed.devices:
-            with steps.start('Connecting to %s' % i):
+            with steps.start('Disconnecting from %s' % i):
                 testbed.devices[i].disconnect()
 
 
