@@ -1,7 +1,7 @@
 #   connectivity_check.py
 
 from pyats import aetest
-from pyats.topology import loader
+#from pyats.topology import loader
 
 
 class CommonSetup(aetest.CommonSetup):
@@ -18,8 +18,8 @@ class CommonCleanup(aetest.CommonCleanup):
 
     @aetest.subsection
     def disconnect(self, steps):
-        testbed = loader.load('lab2_testbed.yaml')
-        testbed.devices
+        #testbed = loader.load('lab2_testbed.yaml')
+        #testbed.devices
         for i in testbed.devices:
             with steps.start('Disconnecting from %s' % i):
                 testbed.devices[i].disconnect()
