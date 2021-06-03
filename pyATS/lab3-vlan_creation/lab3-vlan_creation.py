@@ -4,6 +4,8 @@ from pyats import aetest
 from pyats.topology import loader
 from genie.libs.conf.vlan import vlan
 logger = logging.getLogger(__name__)
+import logging
+
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def establish_connections(self, steps):
