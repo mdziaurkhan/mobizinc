@@ -25,13 +25,11 @@ if __name__ == '__main__':
     testbed = loader.load('lab2_testbed.yaml')
 
     testbed.devices
-    
-    for i in testbed.devices:         # i is a variable.
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--testbed', dest = 'testbed',
+    for i in testbed.devices:
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--testbed', dest = 'testbed',
                         type = loader.load)
-
-    args, unknown = parser.parse_known_args()
+        args, unknown = parser.parse_known_args()
 
     aetest.main(**vars(args))
