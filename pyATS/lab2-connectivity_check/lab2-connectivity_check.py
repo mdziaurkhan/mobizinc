@@ -2,10 +2,11 @@
 
 from pyats import aetest
 from pyats.topology import loader
-testbed = loader.load('lab2_testbed.yaml')
-testbed.devices
+
 
 class CommonSetup(aetest.CommonSetup):
+    testbed = loader.load('lab2_testbed.yaml')
+    testbed.devices
     for i in testbed.devices:
         @aetest.subsection
         def establish_connections(self, steps):
