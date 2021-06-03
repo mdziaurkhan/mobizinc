@@ -18,8 +18,12 @@ class CommonCleanup(aetest.CommonCleanup):
 
     @aetest.subsection
     def disconnect(self, steps, i):
-        with steps.start('Disconnecting from %s' % i):
-            i.disconnect()
+        testbed = loader.load('lab2_testbed.yaml')
+        testbed.devices
+        for i in testbed.devices:
+            with steps.start('Connecting to %s' % i):
+                testbed.devices[i].disconnect()
+
 
 
 if __name__ == '__main__':
