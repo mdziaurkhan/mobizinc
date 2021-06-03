@@ -7,7 +7,7 @@ from genie.libs.conf.vlan import vlan
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
     def establish_connections(self, steps):
-        testbed = loader.load('lab2_testbed.yaml')
+        testbed = loader.load('lab3_testbed.yaml')
         testbed.devices
         for i in testbed.devices:
             with steps.start('Connecting to %s' % i):
@@ -16,7 +16,7 @@ class CommonSetup(aetest.CommonSetup):
 class VlanCreation(aetest.Testcase):
     @aetest.subsection
     def Create_Vlan(self, steps):
-        testbed = loader.load('lab2_testbed.yaml')
+        testbed = loader.load('lab3_testbed.yaml')
         testbed.devices
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
@@ -28,7 +28,7 @@ class CommonCleanup(aetest.CommonCleanup):
 
     @aetest.subsection
     def disconnect(self, steps):
-        testbed = loader.load('lab2_testbed.yaml')
+        testbed = loader.load('lab3_testbed.yaml')
         testbed.devices
         for i in testbed.devices:
             with steps.start('Disconnecting from %s' % i):
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     from pyats.topology import loader
     from genie.libs.conf.vlan import vlan
 
-    testbed = loader.load('lab2_testbed.yaml')
+    testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
 
     parser = argparse.ArgumentParser()
