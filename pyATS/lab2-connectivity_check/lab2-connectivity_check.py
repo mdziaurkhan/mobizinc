@@ -35,8 +35,8 @@ if __name__ == '__main__':
     testbed.devices
 
     #for i in testbed.devices:
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--testbed', dest = 'testbed',type = loader.load)
-    args, unknown = parser.parse_known_args()
+    #parser = argparse.ArgumentParser()
+    #parser.add_argument('--testbed', dest = 'testbed',type = loader.load)
+    #args, unknown = parser.parse_known_args()
 
     aetest.main(**vars(args))
