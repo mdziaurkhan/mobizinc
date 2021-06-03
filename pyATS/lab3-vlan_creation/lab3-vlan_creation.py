@@ -15,6 +15,7 @@ class VlanCreation(aetest.Testcase):
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
                 testbed.devices[i].add_feature(new_vlan)
+                new_vlan.build_config(apply = True)
 
 
 class CommonCleanup(aetest.CommonCleanup):
@@ -23,7 +24,6 @@ class CommonCleanup(aetest.CommonCleanup):
         for i in testbed.devices:
             with steps.start('Disconnecting from %s' % i):
                 testbed.devices[i].disconnect()
-                new_vlan.build_config(apply = True)
 
 
 
