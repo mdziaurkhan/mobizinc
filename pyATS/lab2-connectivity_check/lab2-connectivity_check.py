@@ -5,8 +5,8 @@ from pyats import aetest
 class CommonSetup(aetest.CommonSetup):
 
     @aetest.subsection
-    def establish_connections(self, steps, i):
-        for i in testbed.devices:
+    for i in testbed.devices:
+        def establish_connections(self, steps, i):
             with steps.start('Connecting to %s' % i):
                 i.connect()
 
