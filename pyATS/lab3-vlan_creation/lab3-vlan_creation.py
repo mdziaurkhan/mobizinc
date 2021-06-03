@@ -12,8 +12,6 @@ class CommonSetup(aetest.CommonSetup):
 class VlanCreation(aetest.Testcase):
     @aetest.setup
     def Create_Vlan(self, steps, new_vlan):
-        testbed = loader.load('lab3_testbed.yaml')
-        testbed.devices
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
                 testbed.devices[i].add_feature(new_vlan)
@@ -34,7 +32,7 @@ if __name__ == '__main__':
     from pyats.topology import loader
     from genie.libs.conf.vlan import vlan
 
-    testbed = loader.load('lab2_testbed.yaml')
+    testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
     new_vlan = Vlan(vlan_id = "20", name = "ziatest")
 
