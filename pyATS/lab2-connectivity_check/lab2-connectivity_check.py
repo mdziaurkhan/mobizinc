@@ -11,7 +11,7 @@ class CommonSetup(aetest.CommonSetup):
         testbed.devices
         for i in testbed.devices:
             with steps.start('Connecting to %s' % i):
-                i.connect()
+                testbed.devices[i].connect()
 
 
 class CommonCleanup(aetest.CommonCleanup):
