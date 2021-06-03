@@ -6,10 +6,10 @@ from pyats.topology import loader
 
 class CommonSetup(aetest.CommonSetup):
     @aetest.subsection
-    testbed = loader.load('lab2_testbed.yaml')
-    testbed.devices
-    for i in testbed.devices:
-        def establish_connections(self, steps, i):
+    def establish_connections(self, steps):
+        testbed = loader.load('lab2_testbed.yaml')
+        testbed.devices
+        for i in testbed.devices:
             with steps.start('Connecting to %s' % i):
                 i.connect()
 
