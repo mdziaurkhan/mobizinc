@@ -9,7 +9,7 @@ class CommonSetup(aetest.CommonSetup):
     for i in testbed.devices:
         @aetest.subsection
         def establish_connections(self, steps, i):
-            with steps.start('Connecting to %s' % i):
+            with steps.start('Connecting to '  i):
                 i.connect()
 
 
