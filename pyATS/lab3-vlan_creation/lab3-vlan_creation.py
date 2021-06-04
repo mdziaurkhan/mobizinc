@@ -35,7 +35,7 @@ if __name__ == '__main__':
     from pyats.topology import loader
     #from genie.libs.conf import vlan
     #import genie
-    from genie.config.base import vlan
+    
 
 
     testbed = loader.load('lab3_testbed.yaml')
