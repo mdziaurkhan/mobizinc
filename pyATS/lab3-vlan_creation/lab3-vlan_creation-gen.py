@@ -17,9 +17,11 @@ class VlanCreation(aetest.Testcase):
                 #testbed.devices[i].configure(""" vlan 20
                 #name ziatest
                 #""")
-                #testbed.devices[i].add_feature(new_vlan)
+                testbed.devices[i].add_feature(new_vlan)
                 #new_vlan.build_config()
-                testbed.devices[i].build_config(new_vlan)
+                output = new_vlan.build_config(new_vlan)
+                #testbed.devices[i].build_config(new_vlan)
+                output(testbed.devices[i])
 
 
 class CommonCleanup(aetest.CommonCleanup):
@@ -34,7 +36,8 @@ class CommonCleanup(aetest.CommonCleanup):
 if __name__ == '__main__':
     import argparse
     from pyats.topology import loader
-    from genie.libs.conf.vlan import vlan
+    from genie.libs.conf.vlan import Vlan
+    from genie.libs.conf.interface import interface
     #import genie
 
 
