@@ -29,7 +29,7 @@ class CommonCleanup(aetest.CommonCleanup):
 if __name__ == '__main__':
     import argparse
     from pyats.topology import loader
-    from genie.libs.conf.vlan import vlan
+    from genie.libs.conf import vlan
 
 
     testbed = loader.load('lab3_testbed.yaml')
