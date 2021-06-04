@@ -30,9 +30,10 @@ if __name__ == '__main__':
     import argparse
     from pyats.topology import loader
     from genie.libs.conf.vlan import vlan
+    from genie.conf.vlan import vlan
 
     testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
-    new_vlan = vlan(vlan_id = 20, name = "ziatest")
+    new_vlan = vlan(vlan_id = "20", name = "ziatest")
 
     aetest.main()
