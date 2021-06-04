@@ -14,8 +14,7 @@ class VlanCreation(aetest.Testcase):
     def Create_Vlan(self, steps):
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
-                testbed.devices[i].add_feature(new_vlan)
-                new_vlan.build_config(apply = True)
+                new_vlan.build_config()
 
 
 class CommonCleanup(aetest.CommonCleanup):
@@ -34,6 +33,6 @@ if __name__ == '__main__':
 
     testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
-    new_vlan = 20
+    new_vlan = vlan(vlan_id = 20, name = ziatest)
 
     aetest.main()
