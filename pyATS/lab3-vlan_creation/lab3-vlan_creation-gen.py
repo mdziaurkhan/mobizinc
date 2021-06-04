@@ -38,7 +38,9 @@ if __name__ == '__main__':
     from pyats.topology import loader
     from genie.libs.conf.vlan import Vlan
     from genie.conf import Genie
-    genie_testbed = Genie.init(testbed=pyats_testbed)
+    testbed = loader.load('lab3_testbed.yaml')
+    testbed.devices
+    genie_testbed = Genie.init(testbed=testbed)
     assert Genie.testbed == genie_testbed
     #from genie.libs.conf.interface import interface
     #import genie
@@ -47,6 +49,7 @@ if __name__ == '__main__':
 
     testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
+
     new_vlan = Vlan(vlan_id = "30", name = "ziatest")
     #new_vlan.vlan_id = "20"
     #new_vlan.name = "ziatest"
