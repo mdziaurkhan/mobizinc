@@ -34,6 +34,8 @@ if __name__ == '__main__':
 
     testbed = loader.load('lab3_testbed.yaml')
     testbed.devices
-    new_vlan = vlan(vlan_id = "20", name = "ziatest")
+    new_vlan = vlan()
+    new_vlan.vlan_id = "20"
+    new_vlan.name = "ziatest"
 
     aetest.main()
