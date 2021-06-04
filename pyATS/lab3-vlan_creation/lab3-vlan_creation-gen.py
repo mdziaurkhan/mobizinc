@@ -37,7 +37,7 @@ if __name__ == '__main__':
     import argparse
     from pyats.topology import loader
     from genie.libs.conf.vlan import Vlan
-    from genie.libs.conf.interface import interface
+    #from genie.libs.conf.interface import interface
     #import genie
 
 
