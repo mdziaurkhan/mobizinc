@@ -21,7 +21,7 @@ class VlanCreation(aetest.Testcase):
                 testbed.devices[i].add_feature(new_vlan)
                 #new_vlan.build_config()
                 #output = new_vlan.build_config(apply = True)
-                testbed.devices[i].new_vlan.build_config(apply = True)
+                testbed.devices[i].build_config(new_vlan)
                 #testbed.devices[i].build_config(new_vlan)
                 #output(testbed.devices[i])
 
