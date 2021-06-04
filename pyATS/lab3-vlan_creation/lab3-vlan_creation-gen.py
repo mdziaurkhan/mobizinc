@@ -37,6 +37,9 @@ if __name__ == '__main__':
     import argparse
     from pyats.topology import loader
     from genie.libs.conf.vlan import Vlan
+    from genie.conf import Genie
+    genie_testbed = Genie.init(testbed=pyats_testbed)
+    assert Genie.testbed == genie_testbed
     #from genie.libs.conf.interface import interface
     #import genie
 
