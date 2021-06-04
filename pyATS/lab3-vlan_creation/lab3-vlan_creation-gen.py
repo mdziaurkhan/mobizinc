@@ -20,9 +20,9 @@ class VlanCreation(aetest.Testcase):
                 new_vlan = Vlan(vlan_id = "60", name = "ziatestGen")
                 testbed.devices[i].add_feature(new_vlan)
                 #new_vlan.build_config()
-                output = new_vlan.build_config(apply = True)
+                output = new_vlan.build_config(apply = True, device = testbed.devices[i])
                 #testbed.devices[i].build_config(new_vlan)
-                output(testbed.devices[i])
+                #output(testbed.devices[i])
 
 
 class CommonCleanup(aetest.CommonCleanup):
