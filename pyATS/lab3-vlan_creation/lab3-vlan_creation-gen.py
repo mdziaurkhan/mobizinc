@@ -10,14 +10,14 @@ class CommonSetup(aetest.CommonSetup):
                 testbed.devices[i].connect()
 
 class VlanCreation(aetest.Testcase):
-    @aetest.setup
+    @aetest.test
     def Create_Vlan(self, steps):
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
                 #testbed.devices[i].configure(""" vlan 20
                 #name ziatest
                 #""")
-                new_vlan = Vlan(vlan_id = "60", name = "ziatestGen")
+                #new_vlan = Vlan(vlan_id = "60", name = "ziatestGen")
                 i.add_feature(new_vlan)
                 #new_vlan.build_config()
                 output = new_vlan.build_config(apply = True)
