@@ -11,7 +11,7 @@ class CommonSetup(aetest.CommonSetup):
 
 class VlanCreation(aetest.Testcase):
     @aetest.test
-    def Create_Vlan(self, steps):
+    def Create_Vlan(self, steps, testbed):
         for i in testbed.devices:
             with steps.start('Configuring VLAN into %s' % i):
                 #testbed.devices[i].configure(""" vlan 20
@@ -23,7 +23,7 @@ class VlanCreation(aetest.Testcase):
                 output = new_vlan.build_config(apply = True)
                 #testbed.devices[i].build_config(new_vlan)
                 #testbed.devices[i].build_config(new_vlan)
-                output[testbed.devices[i]]
+                #output[testbed.devices[i]]
 
 
 class CommonCleanup(aetest.CommonCleanup):
